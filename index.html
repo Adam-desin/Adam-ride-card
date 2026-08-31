@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adam Ride Card</title>
+  <title>Adam Ride | Private Driver Iceland</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,125 +13,201 @@
     }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #111;
-      color: #fff;
+      background: #080808;
+      color: white;
       min-height: 100vh;
+    }
+    .page {
+      max-width: 480px;
+      margin: auto;
+      min-height: 100vh;
+      background: #111;
+      overflow: hidden;
+    }
+    .hero {
+      position: relative;
+      padding: 42px 24px 34px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, #333 0%, #111 55%, #080808 100%);
+    }
+    .brand {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
+    .brand span {
+      color: #d9b45b;
+    }
+    .tagline {
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 24px;
+    }
+    .slogan {
+      font-size: 21px;
+      font-weight: 700;
+      color: #d9b45b;
+      margin-bottom: 8px;
+    }
+    .location {
+      font-size: 13px;
+      color: #aaa;
+    }
+    .car {
+      margin: 25px auto 0;
+      width: 100%;
+      height: 180px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #242424, #0d0d0d);
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
-    }
-    .card {
-      width: 100%;
-      max-width: 430px;
-      background: #1b1b1b;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-      border: 1px solid #333;
-    }
-    .hero {
-      padding: 35px 25px 25px;
-      text-align: center;
-      background: linear-gradient(145deg, #202020, #101010);
-    }
-    .logo {
-      font-size: 42px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
-    .subtitle {
-      font-size: 17px;
-      color: #ccc;
-      margin-bottom: 22px;
-    }
-    .slogan {
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-    .location {
-      color: #aaa;
-      font-size: 14px;
+      font-size: 90px;
+      box-shadow: inset 0 0 30px rgba(255,255,255,0.04);
     }
     .content {
-      padding: 25px;
+      padding: 25px 22px 30px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .services {
+      display: grid;
+      gap: 12px;
     }
     .service {
-      background: #252525;
+      display: flex;
+      align-items: center;
+      gap: 14px;
       padding: 17px;
-      border-radius: 15px;
-      margin-bottom: 12px;
+      background: #1d1d1d;
+      border: 1px solid #2b2b2b;
+      border-radius: 16px;
+    }
+    .icon {
+      font-size: 27px;
+      width: 42px;
       text-align: center;
+    }
+    .service strong {
+      display: block;
       font-size: 16px;
-      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .service small {
+      color: #999;
+      font-size: 12px;
+    }
+    .contact {
+      margin-top: 25px;
+      display: grid;
+      gap: 12px;
     }
     .button {
       display: block;
       text-decoration: none;
       text-align: center;
-      padding: 16px;
-      border-radius: 14px;
-      margin-top: 12px;
+      padding: 17px;
+      border-radius: 15px;
       font-size: 17px;
-      font-weight: bold;
+      font-weight: 800;
     }
     .whatsapp {
       background: #25D366;
-      color: #fff;
+      color: white;
     }
     .call {
-      background: #fff;
+      background: #d9b45b;
       color: #111;
     }
     .footer {
       text-align: center;
+      padding: 5px 20px 28px;
       color: #777;
       font-size: 12px;
-      padding: 0 20px 22px;
+      line-height: 1.7;
+    }
+    .footer strong {
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="hero">
-      <div class="logo">ADAM RIDE</div>
-      <div class="subtitle">
+  <div class="page">
+    <section class="hero">
+      <div class="brand">
+        ADAM <span>RIDE</span>
+      </div>
+      <div class="tagline">
         Private Driver & Airport Transfers
       </div>
       <div class="slogan">
         Ride easy, travel happy!
       </div>
       <div class="location">
-        Iceland • Reykjavík • Airport Transfers
+        🇮🇸 Iceland • Reykjavík
       </div>
-    </div>
-    <div class="content">
-      <div class="service">
-        ✈️ Airport Transfers
+      <div class="car">
+        🚗
       </div>
-      <div class="service">
-        🚗 Private Rides
+    </section>
+    <section class="content">
+      <div class="section-title">
+        My Services
       </div>
-      <div class="service">
-        🌋 Golden Circle & Tourist Trips
+      <div class="services">
+        <div class="service">
+          <div class="icon">✈️</div>
+          <div>
+            <strong>Airport Transfers</strong>
+            <small>Reykjavík ↔ Keflavík Airport</small>
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">🚘</div>
+          <div>
+            <strong>Private Driver</strong>
+            <small>Comfortable & reliable private rides</small>
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">🌋</div>
+          <div>
+            <strong>Tourist Trips</strong>
+            <small>Golden Circle & Iceland attractions</small>
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">♨️</div>
+          <div>
+            <strong>Blue Lagoon & Sky Lagoon</strong>
+            <small>Private transportation</small>
+          </div>
+        </div>
       </div>
-      <a
-        class="button whatsapp"
-        href="https://wa.me/31687344108"
-        target="_blank">
-        💬 WhatsApp Adam
-      </a>
-      <a
-        class="button call"
-        href="tel:+31687344108">
-        📞 Call Adam
-      </a>
-    </div>
+      <div class="contact">
+        <a
+          class="button whatsapp"
+          href="https://wa.me/31687344108"
+          target="_blank">
+          💬 Book via WhatsApp
+        </a>
+        <a
+          class="button call"
+          href="tel:+31687344108">
+          📞 Call Adam
+        </a>
+      </div>
+    </section>
     <div class="footer">
-      Reliable • Comfortable • Professional
+      <strong>ADAM RIDE</strong><br>
+      Professional • Comfortable • Reliable<br>
+      Iceland Private Transportation
     </div>
   </div>
 </body>
