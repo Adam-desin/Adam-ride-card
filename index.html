@@ -1,214 +1,374 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adam Ride | Private Driver Iceland</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: white;
-      min-height: 100vh;
-    }
-    .page {
-      max-width: 480px;
-      margin: auto;
-      min-height: 100vh;
-      background: #111;
-      overflow: hidden;
-    }
-    .hero {
-      position: relative;
-      padding: 42px 24px 34px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, #333 0%, #111 55%, #080808 100%);
-    }
-    .brand {
-      font-size: 42px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      margin-bottom: 8px;
-    }
-    .brand span {
-      color: #d9b45b;
-    }
-    .tagline {
-      font-size: 16px;
-      color: #ddd;
-      margin-bottom: 24px;
-    }
-    .slogan {
-      font-size: 21px;
-      font-weight: 700;
-      color: #d9b45b;
-      margin-bottom: 8px;
-    }
-    .location {
-      font-size: 13px;
-      color: #aaa;
-    }
-    .car {
-      margin: 25px auto 0;
-      width: 100%;
-      height: 180px;
-      border-radius: 22px;
-      background: linear-gradient(145deg, #242424, #0d0d0d);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 90px;
-      box-shadow: inset 0 0 30px rgba(255,255,255,0.04);
-    }
-    .content {
-      padding: 25px 22px 30px;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-    .services {
-      display: grid;
-      gap: 12px;
-    }
-    .service {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 17px;
-      background: #1d1d1d;
-      border: 1px solid #2b2b2b;
-      border-radius: 16px;
-    }
-    .icon {
-      font-size: 27px;
-      width: 42px;
-      text-align: center;
-    }
-    .service strong {
-      display: block;
-      font-size: 16px;
-      margin-bottom: 4px;
-    }
-    .service small {
-      color: #999;
-      font-size: 12px;
-    }
-    .contact {
-      margin-top: 25px;
-      display: grid;
-      gap: 12px;
-    }
-    .button {
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      padding: 17px;
-      border-radius: 15px;
-      font-size: 17px;
-      font-weight: 800;
-    }
-    .whatsapp {
-      background: #25D366;
-      color: white;
-    }
-    .call {
-      background: #d9b45b;
-      color: #111;
-    }
-    .footer {
-      text-align: center;
-      padding: 5px 20px 28px;
-      color: #777;
-      font-size: 12px;
-      line-height: 1.7;
-    }
-    .footer strong {
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adam Ride | Private Driver Iceland</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:#080b0f;
+  color:white;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+}
+
+.card{
+  width:100%;
+  max-width:500px;
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 20%,rgba(80,100,120,.25),transparent 35%),
+    linear-gradient(180deg,#17212b 0%,#0b1117 55%,#05070a 100%);
+}
+
+/* Icelandic background */
+.sky{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse at 20% 15%,rgba(150,220,210,.18),transparent 25%),
+    radial-gradient(ellipse at 80% 25%,rgba(90,190,170,.12),transparent 28%);
+}
+
+.mountain{
+  position:absolute;
+  bottom:27%;
+  left:-10%;
+  width:120%;
+  height:32%;
+  background:#101820;
+  clip-path:polygon(
+    0 100%,8% 65%,17% 78%,29% 35%,
+    39% 62%,51% 20%,64% 68%,
+    76% 42%,89% 72%,100% 48%,100% 100%
+  );
+}
+
+.ground{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:34%;
+  background:
+    linear-gradient(180deg,transparent,#070a0d 25%),
+    #080b0e;
+}
+
+/* Car */
+.car{
+  position:absolute;
+  width:82%;
+  height:180px;
+  left:9%;
+  bottom:25%;
+  filter:drop-shadow(0 20px 18px rgba(0,0,0,.75));
+}
+
+.car-body{
+  position:absolute;
+  left:2%;
+  bottom:25px;
+  width:96%;
+  height:75px;
+  background:linear-gradient(180deg,#e52b2f,#a90f17 75%,#760b10);
+  border-radius:35px 42px 18px 20px;
+  box-shadow:
+    inset 0 5px 8px rgba(255,255,255,.25),
+    inset 0 -10px 15px rgba(0,0,0,.35);
+}
+
+.car-roof{
+  position:absolute;
+  left:22%;
+  top:30px;
+  width:53%;
+  height:65px;
+  background:linear-gradient(145deg,#c92128,#8d1017);
+  clip-path:polygon(14% 100%,28% 5%,68% 0,91% 100%);
+}
+
+.window{
+  position:absolute;
+  top:39px;
+  width:21%;
+  height:40px;
+  background:linear-gradient(145deg,#273c4c,#071017);
+  border:2px solid rgba(255,255,255,.13);
+}
+
+.window.one{
+  left:32%;
+  clip-path:polygon(18% 0,100% 0,86% 100%,0 100%);
+}
+
+.window.two{
+  left:54%;
+  clip-path:polygon(0 0,78% 0,100% 100%,12% 100%);
+}
+
+.light{
+  position:absolute;
+  width:25px;
+  height:13px;
+  border-radius:50%;
+  background:#fff4d0;
+  box-shadow:0 0 18px #fff;
+  top:56px;
+}
+
+.light.left{left:5px}
+.light.right{right:5px}
+
+.wheel{
+  position:absolute;
+  bottom:7px;
+  width:42px;
+  height:42px;
+  background:#050607;
+  border:7px solid #171b1f;
+  border-radius:50%;
+  box-shadow:inset 0 0 0 5px #333;
+}
+
+.wheel.left{left:17%}
+.wheel.right{right:17%}
+
+.plate{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:39px;
+  background:white;
+  color:#111;
+  padding:4px 10px;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+  border-radius:2px;
+}
+
+/* Dark overlay */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.05) 0%,
+      rgba(0,0,0,.05) 35%,
+      rgba(0,0,0,.35) 58%,
+      rgba(0,0,0,.95) 100%
+    );
+}
+
+/* Content */
+.content{
+  position:absolute;
+  z-index:10;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:30px 25px 24px;
+}
+
+.brand{
+  font-size:43px;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.private{
+  margin-top:7px;
+  font-size:12px;
+  letter-spacing:2.5px;
+  color:#cbd0d5;
+  font-weight:600;
+}
+
+.divider{
+  width:48px;
+  height:3px;
+  background:#e52b2f;
+  margin:18px 0 14px;
+  border-radius:10px;
+}
+
+.slogan{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  margin-bottom:18px;
+}
+
+.service{
+  padding:13px 10px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(12px);
+  border-radius:11px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.buttons{
+  display:grid;
+  gap:9px;
+}
+
+.btn{
+  width:100%;
+  height:51px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  border-radius:11px;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+
+.whatsapp{
+  background:#25D366;
+  color:white;
+  box-shadow:0 8px 25px rgba(37,211,102,.18);
+}
+
+.call{
+  color:white;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(10px);
+}
+
+.footer{
+  text-align:center;
+  margin-top:15px;
+  color:#8d969e;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+@media(max-width:380px){
+  .brand{font-size:36px}
+  .slogan{font-size:19px}
+  .content{padding:25px 18px 18px}
+}
+</style>
 </head>
+
 <body>
-  <div class="page">
-    <section class="hero">
-      <div class="brand">
-        ADAM <span>RIDE</span>
-      </div>
-      <div class="tagline">
-        Private Driver & Airport Transfers
-      </div>
-      <div class="slogan">
-        Ride easy, travel happy!
-      </div>
-      <div class="location">
-        🇮🇸 Iceland • Reykjavík
-      </div>
-      <div class="car">
-        🚗
-      </div>
-    </section>
-    <section class="content">
-      <div class="section-title">
-        My Services
-      </div>
-      <div class="services">
-        <div class="service">
-          <div class="icon">✈️</div>
-          <div>
-            <strong>Airport Transfers</strong>
-            <small>Reykjavík ↔ Keflavík Airport</small>
-          </div>
-        </div>
-        <div class="service">
-          <div class="icon">🚘</div>
-          <div>
-            <strong>Private Driver</strong>
-            <small>Comfortable & reliable private rides</small>
-          </div>
-        </div>
-        <div class="service">
-          <div class="icon">🌋</div>
-          <div>
-            <strong>Tourist Trips</strong>
-            <small>Golden Circle & Iceland attractions</small>
-          </div>
-        </div>
-        <div class="service">
-          <div class="icon">♨️</div>
-          <div>
-            <strong>Blue Lagoon & Sky Lagoon</strong>
-            <small>Private transportation</small>
-          </div>
-        </div>
-      </div>
-      <div class="contact">
-        <a
-          class="button whatsapp"
-          href="https://wa.me/31687344108"
-          target="_blank">
-          💬 Book via WhatsApp
-        </a>
-        <a
-          class="button call"
-          href="tel:+31687344108">
-          📞 Call Adam
-        </a>
-      </div>
-    </section>
-    <div class="footer">
-      <strong>ADAM RIDE</strong><br>
-      Professional • Comfortable • Reliable<br>
-      Iceland Private Transportation
-    </div>
+
+<div class="card">
+
+  <div class="sky"></div>
+  <div class="mountain"></div>
+  <div class="ground"></div>
+
+  <!-- RED TOYOTA COROLLA CROSS STYLE -->
+  <div class="car">
+
+    <div class="car-roof"></div>
+
+    <div class="window one"></div>
+    <div class="window two"></div>
+
+    <div class="car-body"></div>
+
+    <div class="light left"></div>
+    <div class="light right"></div>
+
+    <div class="wheel left"></div>
+    <div class="wheel right"></div>
+
+    <div class="plate">RIDE EASY</div>
+
   </div>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+
+    <div class="brand">ADAM RIDE</div>
+
+    <div class="private">
+      PRIVATE DRIVER • ICELAND
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="slogan">
+      Ride easy, travel happy!
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        ✈️ Airport Transfers
+      </div>
+
+      <div class="service">
+        🚗 Private Rides
+      </div>
+
+      <div class="service">
+        🌋 Golden Circle
+      </div>
+
+      <div class="service">
+        🏔️ Iceland Tours
+      </div>
+
+    </div>
+
+    <div class="buttons">
+
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride."
+      >
+        WhatsApp Adam
+      </a>
+
+      <a
+        class="btn call"
+        href="tel:+31687344108"
+      >
+        📞 Call Adam
+      </a>
+
+    </div>
+
+    <div class="footer">
+      REYKJAVÍK • KEFLAVÍK AIRPORT • ICELAND
+    </div>
+
+  </div>
+
+</div>
+
 </body>
 </html>
