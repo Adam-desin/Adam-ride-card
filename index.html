@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#070707">
-<meta name="description" content="ADAM RIDE — Private Driver & Airport Transfers in Iceland.">
-<title>ADAM RIDE | Private Driver & Airport Transfers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ADAM RIDE | Private Driver Iceland</title>
+
+<meta name="description" content="ADAM RIDE — Premium private driver, airport transfers and private tours in Iceland. Reykjavík to Keflavík Airport.">
+<meta name="theme-color" content="#f7f8f6">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 *{
     margin:0;
@@ -15,907 +18,1014 @@
     box-sizing:border-box;
 }
 
-:root{
-    --black:#060606;
-    --black-soft:#0d0d0d;
-    --panel:#111111;
-    --line:#292929;
-    --white:#f5f3ee;
-    --muted:#92908b;
-    --red:#b5121b;
-    --red-bright:#d51e28;
-    --gold:#c6a15b;
-}
-
 html{
     scroll-behavior:smooth;
 }
 
 body{
-    margin:0;
-    background:#020202;
-    color:var(--white);
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
+    font-family:'DM Sans',Arial,sans-serif;
+    background:#f5f7f5;
+    color:#17201e;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 .page{
     width:100%;
-    max-width:560px;
-    min-height:100vh;
+    max-width:520px;
     margin:auto;
-    background:var(--black);
-    overflow:hidden;
+    background:#ffffff;
+    min-height:100vh;
+    box-shadow:0 0 60px rgba(0,0,0,.08);
 }
 
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-.header{
-    height:74px;
-    padding:0 22px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #1d1d1d;
-    background:#080808;
-}
-
-.logo{
-    color:#f4f2ed;
-    font-size:20px;
-    font-weight:950;
-    letter-spacing:3px;
-}
-
-.logo span{
-    color:var(--red-bright);
-}
-
-.header-tag{
-    color:#777;
-    font-size:8px;
-    font-weight:700;
-    letter-spacing:1.6px;
-    text-transform:uppercase;
-    border:1px solid #303030;
-    border-radius:50px;
-    padding:8px 10px;
-}
-
-
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero{
     position:relative;
-    padding:54px 20px 0;
-    text-align:center;
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            #282828 0%,
-            #151515 30%,
-            #090909 67%,
-            #060606 100%
-        );
-}
-
-.eyebrow{
-    color:var(--gold);
-    font-size:8px;
-    font-weight:850;
-    letter-spacing:3px;
-    text-transform:uppercase;
-}
-
-.hero-title{
-    margin-top:17px;
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:50px;
-    line-height:.92;
-    font-weight:400;
-    letter-spacing:-2.5px;
-}
-
-.hero-title strong{
-    display:block;
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Helvetica Neue",
-        Arial,
-        sans-serif;
-    font-weight:950;
-    color:#efede8;
-}
-
-.hero-title span{
-    display:block;
-    color:#aaa8a3;
-    font-weight:400;
-}
-
-.hero-description{
-    max-width:365px;
-    margin:18px auto 0;
-    color:#94928d;
-    font-size:13px;
-    line-height:1.7;
-}
-
-
-/* =====================================================
-   CAR
-===================================================== */
-
-.car-section{
-    position:relative;
-    height:300px;
-    margin:32px -20px 0;
+    min-height:690px;
     overflow:hidden;
-    background:#080808;
-}
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 
-.car-section:before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:160px;
-    z-index:1;
     background:
-        radial-gradient(
-            ellipse at center,
-            rgba(181,18,27,.25),
-            transparent 65%
-        );
+        linear-gradient(
+            180deg,
+            rgba(6,25,32,.12) 0%,
+            rgba(6,25,32,.04) 35%,
+            rgba(6,25,32,.72) 100%
+        ),
+        url("https://images.unsplash.com/photo-1504829857797-ddff29c27927?auto=format&fit=crop&w=1400&q=90")
+        center/cover no-repeat;
 }
 
-.car-section:after{
+/* subtle glass layer */
+.hero::after{
     content:"";
     position:absolute;
     inset:0;
-    z-index:2;
-    background:
-        linear-gradient(
-            to bottom,
-            transparent 48%,
-            #060606 100%
-        );
+    background:linear-gradient(
+        115deg,
+        rgba(255,255,255,.10),
+        transparent 35%,
+        rgba(0,0,0,.12)
+    );
+    pointer-events:none;
 }
 
-.car-image{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    display:block;
-    filter:
-        saturate(1.12)
-        contrast(1.04);
-}
-
-
-/* =====================================================
-   HERO BUTTONS
-===================================================== */
-
-.hero-buttons{
+.topbar{
     position:relative;
-    z-index:5;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:9px;
-    padding:0 0 28px;
-    margin-top:-3px;
+    z-index:3;
+    padding:25px 23px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.hero-button{
-    min-height:50px;
+.logo{
     display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-mark{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+    background:rgba(255,255,255,.94);
+    color:#bd2427;
+    display:flex;
+    align-items:center;
     justify-content:center;
+    font-size:20px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.logo-text{
+    font-size:20px;
+    letter-spacing:2.5px;
+    font-weight:700;
+}
+
+.logo-text span{
+    color:#ffdddd;
+    font-weight:500;
+}
+
+.verified{
+    display:flex;
     align-items:center;
-    text-decoration:none;
-    border-radius:10px;
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:.8px;
+    gap:6px;
+    padding:8px 12px;
+    border-radius:30px;
+    background:rgba(255,255,255,.16);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.25);
+    font-size:11px;
+    font-weight:600;
 }
 
-.whatsapp-button{
-    background:var(--red);
-    color:#fff;
-}
+/* Hero content */
 
-.call-button{
-    background:#141414;
-    color:#fff;
-    border:1px solid #363636;
-}
-
-
-/* =====================================================
-   WEEKLY SPECIAL
-===================================================== */
-
-.offer{
+.hero-content{
     position:relative;
-    margin:20px 18px 38px;
-    padding:26px 22px 22px;
-    border-radius:18px;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            #191919 0%,
-            #0b0b0b 100%
-        );
-
-    border:1px solid #353535;
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.6);
+    z-index:3;
+    padding:0 24px 32px;
 }
 
-.offer:before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    width:4px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            var(--red-bright),
-            var(--gold)
-        );
-}
-
-.offer-header{
-    display:flex;
-    justify-content:space-between;
+.eyebrow{
+    display:inline-flex;
     align-items:center;
-}
-
-.offer-badge{
-    background:var(--red);
-    color:white;
-    padding:7px 11px;
-    border-radius:3px;
-
-    font-size:8px;
-    font-weight:950;
-    letter-spacing:1.7px;
-}
-
-.offer-note-top{
-    color:#686868;
-    font-size:8px;
-    text-transform:uppercase;
-    letter-spacing:1.4px;
-}
-
-.offer-title{
-    margin-top:19px;
-
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:29px;
-    line-height:1.08;
-    font-weight:400;
-}
-
-.offer-route{
-    margin-top:9px;
-    color:#858585;
-    font-size:10px;
-}
-
-.price{
-    display:flex;
-    align-items:baseline;
     gap:8px;
-    margin-top:18px;
-}
-
-.price-number{
-    font-size:44px;
-    line-height:1;
-    font-weight:950;
-    letter-spacing:-2.3px;
-}
-
-.price-currency{
-    color:var(--gold);
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.offer-description{
-    margin-top:6px;
-    color:#656565;
-    font-size:9px;
-}
-
-.offer-button{
-    display:block;
-    margin-top:18px;
-    padding:14px;
-
-    background:#f2efe9;
-    color:#080808;
-
-    border-radius:9px;
-    text-align:center;
-    text-decoration:none;
-
-    font-size:10px;
-    font-weight:950;
-    letter-spacing:.7px;
-}
-
-
-/* =====================================================
-   SERVICES
-===================================================== */
-
-.services{
-    padding:0 20px 31px;
-}
-
-.services-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
+    padding:8px 13px;
+    border-radius:30px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter:blur(10px);
+    font-size:11px;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
     margin-bottom:15px;
 }
 
-.services-header h2{
-    font-size:21px;
-    font-weight:850;
+.eyebrow-dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#63df9a;
+    box-shadow:0 0 10px #63df9a;
 }
 
-.services-header span{
-    color:#666;
-    font-size:8px;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    line-height:.98;
+    letter-spacing:-1.5px;
+    margin-bottom:15px;
+    text-shadow:0 4px 25px rgba(0,0,0,.25);
 }
 
-.service{
-    display:grid;
-    grid-template-columns:42px 1fr;
-    gap:13px;
-
-    padding:17px 0;
-
-    border-top:1px solid var(--line);
-}
-
-.service:last-child{
-    border-bottom:1px solid var(--line);
-}
-
-.service-number{
-    color:var(--gold);
-    font-family:Georgia,serif;
-    font-size:12px;
-}
-
-.service-title{
+.hero h1 span{
     display:block;
-    color:#f0eee9;
-    font-size:13px;
-    font-weight:850;
+    color:#ffffff;
+}
+
+.hero-description{
+    max-width:400px;
+    color:rgba(255,255,255,.91);
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.slogan{
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.4px;
+    color:#fff;
+}
+
+.slogan span{
+    color:#ffd7d7;
+}
+
+/* =========================
+   QUICK CARD
+========================= */
+
+.quick-card{
+    position:relative;
+    z-index:5;
+    margin:-1px 18px 0;
+    transform:translateY(-24px);
+    padding:18px;
+    border-radius:22px;
+    background:rgba(255,255,255,.97);
+    box-shadow:0 18px 50px rgba(21,38,35,.15);
+    border:1px solid rgba(255,255,255,.8);
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.quick-item{
+    background:#f4f7f5;
+    border-radius:15px;
+    padding:14px;
+}
+
+.quick-label{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#87918e;
     margin-bottom:5px;
 }
 
-.service-description{
-    display:block;
-    color:#777;
-    font-size:10px;
-    line-height:1.55;
+.quick-value{
+    font-size:13px;
+    font-weight:700;
+    color:#17201e;
 }
 
+.quick-button{
+    grid-column:1/-1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px;
+    border-radius:14px;
+    background:#bd2427;
+    color:white;
+    font-size:14px;
+    font-weight:700;
+    box-shadow:0 8px 20px rgba(189,36,39,.22);
+    transition:.25s;
+}
 
-/* =====================================================
-   TRUST
-===================================================== */
+.quick-button:hover{
+    transform:translateY(-2px);
+}
 
-.trust{
-    margin:0 20px 31px;
-    padding:21px 8px;
+/* =========================
+   MAIN CONTENT
+========================= */
 
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
+.content{
+    padding:0 20px 30px;
+}
 
+.section-kicker{
     text-align:center;
-
-    background:#0c0c0c;
-    border:1px solid #252525;
-    border-radius:16px;
-}
-
-.trust strong{
-    display:block;
-    font-size:9px;
-    letter-spacing:1.2px;
-}
-
-.trust span{
-    display:block;
-    margin-top:5px;
-    color:#626262;
-    font-size:8px;
-}
-
-
-/* =====================================================
-   BOOKING
-===================================================== */
-
-.booking{
-    margin:0 18px 28px;
-    padding:25px 21px;
-
-    background:#f2efe8;
-    color:#090909;
-
-    border-radius:17px;
-}
-
-.booking-label{
-    color:#777;
-    font-size:8px;
+    color:#bd2427;
+    font-size:10px;
+    font-weight:700;
     text-transform:uppercase;
     letter-spacing:2px;
+    margin-bottom:7px;
 }
 
-.booking h2{
-    margin-top:8px;
-
-    font-family:Georgia,"Times New Roman",serif;
-    font-size:29px;
-    font-weight:400;
+.section-title{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:31px;
+    line-height:1.1;
+    color:#17201e;
+    margin-bottom:25px;
 }
 
-.booking p{
-    margin-top:7px;
+/* =========================
+   WEEKLY OFFER
+========================= */
 
-    color:#666;
-    font-size:10px;
-    line-height:1.6;
-}
-
-.booking-button{
-    display:block;
-
-    margin-top:17px;
-    padding:14px;
-
-    background:#090909;
+.offer{
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    margin-bottom:38px;
+    padding:25px 23px 23px;
     color:white;
 
-    border-radius:9px;
-
-    text-align:center;
-    text-decoration:none;
-
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:.6px;
+    background:
+        linear-gradient(
+            115deg,
+            rgba(14,49,57,.96),
+            rgba(29,79,78,.94)
+        );
+    box-shadow:0 16px 38px rgba(19,61,63,.18);
 }
 
+.offer::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    right:-70px;
+    top:-75px;
+}
 
-/* =====================================================
+.offer::after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.08);
+    right:-35px;
+    bottom:-65px;
+}
+
+.offer-top{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.offer-badge{
+    display:inline-block;
+    padding:7px 11px;
+    border-radius:30px;
+    background:#ffffff;
+    color:#174d4b;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.offer-week{
+    font-size:10px;
+    color:rgba(255,255,255,.65);
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.offer h2{
+    position:relative;
+    z-index:2;
+    font-size:23px;
+    line-height:1.25;
+    margin-bottom:8px;
+}
+
+.route{
+    position:relative;
+    z-index:2;
+    color:rgba(255,255,255,.78);
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.price-row{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:end;
+    justify-content:space-between;
+}
+
+.price{
+    font-size:39px;
+    line-height:1;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.price small{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0;
+}
+
+.old-price{
+    color:rgba(255,255,255,.55);
+    font-size:12px;
+    text-decoration:line-through;
+}
+
+.offer-note{
+    position:relative;
+    z-index:2;
+    margin-top:17px;
+    padding-top:14px;
+    border-top:1px solid rgba(255,255,255,.15);
+    color:rgba(255,255,255,.72);
+    font-size:11px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    display:grid;
+    gap:11px;
+    margin-bottom:38px;
+}
+
+.service{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px;
+    border-radius:18px;
+    background:#f8faf8;
+    border:1px solid #e9eeeb;
+    transition:.25s;
+}
+
+.service:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.service-icon{
+    flex:0 0 45px;
+    width:45px;
+    height:45px;
+    border-radius:14px;
+    background:#edf4f1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+}
+
+.service-text{
+    flex:1;
+}
+
+.service-title{
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:3px;
+}
+
+.service-description{
+    font-size:11px;
+    color:#818b87;
+    line-height:1.4;
+}
+
+.arrow{
+    color:#aab3af;
+    font-size:18px;
+}
+
+/* =========================
+   BUSINESS CARD
+========================= */
+
+.business-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    background:#17201e;
+    color:white;
+    padding:24px;
+    margin-bottom:30px;
+}
+
+.business-card::after{
+    content:"";
+    position:absolute;
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.07);
+    right:-80px;
+    top:-70px;
+}
+
+.card-small{
+    position:relative;
+    z-index:2;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#b6c5c0;
+    margin-bottom:9px;
+}
+
+.card-name{
+    position:relative;
+    z-index:2;
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    margin-bottom:3px;
+}
+
+.card-role{
+    position:relative;
+    z-index:2;
+    font-size:12px;
+    color:#b6c5c0;
+    margin-bottom:22px;
+}
+
+.card-info{
+    position:relative;
+    z-index:2;
+    display:grid;
+    gap:11px;
+}
+
+.info-line{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+    color:#e2e9e6;
+}
+
+.info-icon{
+    width:30px;
+    height:30px;
+    border-radius:9px;
+    background:rgba(255,255,255,.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.card-bottom{
+    position:relative;
+    z-index:2;
+    margin-top:21px;
+    padding-top:15px;
+    border-top:1px solid rgba(255,255,255,.1);
+    font-size:10px;
+    color:#82928d;
+    letter-spacing:.4px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    text-align:center;
+    padding:5px 0 8px;
+}
+
+.cta h2{
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    line-height:1.15;
+    margin-bottom:9px;
+}
+
+.cta p{
+    font-size:12px;
+    color:#7d8884;
+    line-height:1.5;
+    margin-bottom:19px;
+}
+
+.cta-buttons{
+    display:grid;
+    gap:10px;
+}
+
+.cta-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:9px;
+    padding:16px;
+    border-radius:15px;
+    font-size:14px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.cta-button:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp{
+    background:#25d366;
+    color:white;
+    box-shadow:0 8px 20px rgba(37,211,102,.18);
+}
+
+.call{
+    background:#f1f4f2;
+    color:#17201e;
+    border:1px solid #e3e9e6;
+}
+
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 .footer{
-    padding:24px 20px 34px;
-
-    border-top:1px solid #1c1c1c;
-
     text-align:center;
-
-    color:#555;
-    font-size:9px;
-    line-height:1.9;
+    padding:24px 20px 30px;
+    border-top:1px solid #edf0ee;
+    color:#8c9692;
+    font-size:10px;
+    line-height:1.8;
 }
 
-.footer-logo{
-    margin-bottom:3px;
-
-    color:#999;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:3px;
+.footer strong{
+    color:#26332f;
+    letter-spacing:1.5px;
 }
 
+.footer-slogan{
+    color:#bd2427;
+    font-weight:700;
+    margin-top:4px;
+}
 
-/* =====================================================
-   DESKTOP
-===================================================== */
+/* =========================
+   MOBILE
+========================= */
 
-@media(min-width:561px){
+@media(max-width:380px){
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .price{
+        font-size:34px;
+    }
+
+    .quick-card{
+        margin-left:13px;
+        margin-right:13px;
+    }
+}
+
+@media(min-width:521px){
 
     body{
-        padding:20px 0;
+        padding:25px 0;
     }
 
     .page{
-        border-radius:25px;
-        box-shadow:0 0 100px rgba(0,0,0,.9);
-    }
-
-    .header{
-        border-radius:25px 25px 0 0;
+        border-radius:28px;
+        overflow:hidden;
     }
 }
-
 </style>
 </head>
-
 
 <body>
 
 <div class="page">
 
+    <!-- ================= HERO ================= -->
 
-<!-- =================================================
-     HEADER
-================================================= -->
+    <section class="hero">
 
-<header class="header">
+        <div class="topbar">
 
-    <div class="logo">
-        ADAM <span>RIDE</span>
-    </div>
+            <div class="logo">
+                <div class="logo-mark">A</div>
 
-    <div class="header-tag">
-        Iceland · Private
-    </div>
+                <div class="logo-text">
+                    ADAM <span>RIDE</span>
+                </div>
+            </div>
 
-</header>
+            <div class="verified">
+                <span>●</span>
+                Iceland
+            </div>
 
-
-<!-- =================================================
-     HERO
-================================================= -->
-
-<section class="hero">
-
-    <div class="eyebrow">
-        PRIVATE DRIVER · AIRPORT TRANSFERS
-    </div>
-
-
-    <h1 class="hero-title">
-
-        <strong>Ride easy.</strong>
-
-        <span>Travel happy.</span>
-
-    </h1>
-
-
-    <p class="hero-description">
-
-        Premium private transportation for airport transfers,
-        personal journeys and selected Iceland experiences.
-
-    </p>
-
-
-    <!-- =================================================
-         CAR IMAGE
-    ================================================= -->
-
-    <div class="car-section">
-
-        <img
-            class="car-image"
-            alt="Red Toyota Corolla Cross"
-            src="data:image/webp;base64,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"
-        >
-
-    </div>
-
-
-    <div class="hero-buttons">
-
-        <a
-            class="hero-button whatsapp-button"
-            href="https://wa.me/31687344108?text=Hi%20Adam%2C%20I%27d%20like%20to%20book%20a%20ride."
-            target="_blank"
-        >
-            BOOK ON WHATSAPP
-        </a>
-
-        <a
-            class="hero-button call-button"
-            href="tel:+31687344108"
-        >
-            CALL ADAM
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =================================================
-     WEEKLY SPECIAL
-===================================================== -->
-
-<section class="offer">
-
-    <div class="offer-header">
-
-        <div class="offer-badge">
-            WEEKLY SPECIAL
         </div>
 
-        <div class="offer-note-top">
-            Limited fare
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Private transportation
+            </div>
+
+            <h1>
+                Discover
+                <span>Iceland.</span>
+            </h1>
+
+            <p class="hero-description">
+                Travel through Iceland in comfort, with a private driver who knows the roads, the views and the places worth stopping for.
+            </p>
+
+            <div class="slogan">
+                Ride easy, <span>travel happy.</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUICK BOOKING ================= -->
+
+    <div class="quick-card">
+
+        <div class="quick-grid">
+
+            <div class="quick-item">
+                <div class="quick-label">From</div>
+                <div class="quick-value">Reykjavík</div>
+            </div>
+
+            <div class="quick-item">
+                <div class="quick-label">To</div>
+                <div class="quick-value">Keflavík Airport</div>
+            </div>
+
+            <a
+                class="quick-button"
+                href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride."
+                target="_blank">
+                💬 Check availability & Book
+            </a>
+
         </div>
 
     </div>
 
 
-    <h2 class="offer-title">
-        Reykjavík to<br>
-        Keflavík Airport
-    </h2>
+    <!-- ================= CONTENT ================= -->
+
+    <main class="content">
 
 
-    <div class="offer-route">
-        Private one-way transfer · Door to door
-    </div>
+        <!-- WEEKLY OFFER -->
 
-
-    <div class="price">
-
-        <div class="price-number">
-            20,000
+        <div class="section-kicker">
+            This week's special
         </div>
 
-        <div class="price-currency">
-            ISK
-        </div>
-
-    </div>
-
-
-    <div class="offer-description">
-        Special weekly promotional fare · Book early
-    </div>
-
-
-    <a
-        class="offer-button"
-        href="https://wa.me/31687344108?text=Hi%20Adam%2C%20I%27d%20like%20to%20book%20the%2020%2C000%20ISK%20Weekly%20Special%20from%20Reykjavik%20to%20Keflavik%20Airport."
-        target="_blank"
-    >
-        RESERVE THIS WEEK'S FARE →
-    </a>
-
-</section>
-
-
-<!-- =================================================
-     SERVICES
-===================================================== -->
-
-<section class="services">
-
-    <div class="services-header">
-
-        <h2>
-            Services
+        <h2 class="section-title">
+            Travel smarter.
         </h2>
 
-        <span>
+
+        <section class="offer">
+
+            <div class="offer-top">
+
+                <div class="offer-badge">
+                    Weekly Offer
+                </div>
+
+                <div class="offer-week">
+                    Limited availability
+                </div>
+
+            </div>
+
+            <h2>
+                Reykjavík → Keflavík Airport
+            </h2>
+
+            <div class="route">
+                Private airport transfer • Comfortable ride • Door to door
+            </div>
+
+            <div class="price-row">
+
+                <div>
+                    <div class="price">
+                        20,000 <small>ISK</small>
+                    </div>
+                </div>
+
+                <div class="old-price">
+                    Special weekly price
+                </div>
+
+            </div>
+
+            <div class="offer-note">
+                ✦ Reserve your airport transfer directly with Adam
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <div class="section-kicker">
             What I offer
-        </span>
-
-    </div>
-
-
-    <div class="service">
-
-        <div class="service-number">
-            01
         </div>
 
-        <div>
+        <h2 class="section-title">
+            Your journey,<br>
+            your way.
+        </h2>
 
-            <span class="service-title">
-                Airport Transfers
-            </span>
 
-            <span class="service-description">
-                Reykjavík ↔ Keflavík International Airport
-            </span>
+        <div class="services">
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    ✈️
+                </div>
+
+                <div class="service-text">
+
+                    <div class="service-title">
+                        Airport Transfers
+                    </div>
+
+                    <div class="service-description">
+                        Reykjavík ↔ Keflavík International Airport
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    🚘
+                </div>
+
+                <div class="service-text">
+
+                    <div class="service-title">
+                        Private Driver
+                    </div>
+
+                    <div class="service-description">
+                        Comfortable and personal transportation
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    🌋
+                </div>
+
+                <div class="service-text">
+
+                    <div class="service-title">
+                        Private Iceland Trips
+                    </div>
+
+                    <div class="service-description">
+                        Golden Circle & Iceland's most beautiful places
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    ♨️
+                </div>
+
+                <div class="service-text">
+
+                    <div class="service-title">
+                        Blue Lagoon & Sky Lagoon
+                    </div>
+
+                    <div class="service-description">
+                        Relax and enjoy the journey without the stress
+                    </div>
+
+                </div>
+
+                <div class="arrow">
+                    ›
+                </div>
+
+            </div>
+
 
         </div>
 
-    </div>
+
+        <!-- BUSINESS CARD -->
+
+        <section class="business-card">
+
+            <div class="card-small">
+                Private Driver • Iceland
+            </div>
+
+            <div class="card-name">
+                Adam
+            </div>
+
+            <div class="card-role">
+                Private Driver & Airport Transfers
+            </div>
 
 
-    <div class="service">
+            <div class="card-info">
 
-        <div class="service-number">
-            02
+                <div class="info-line">
+                    <div class="info-icon">📍</div>
+                    Reykjavík, Iceland
+                </div>
+
+                <div class="info-line">
+                    <div class="info-icon">📱</div>
+                    +31 6 87344108
+                </div>
+
+                <div class="info-line">
+                    <div class="info-icon">🚗</div>
+                    Comfortable private transportation
+                </div>
+
+            </div>
+
+
+            <div class="card-bottom">
+                PROFESSIONAL &nbsp; • &nbsp; COMFORTABLE &nbsp; • &nbsp; RELIABLE
+            </div>
+
+        </section>
+
+
+        <!-- FINAL CTA -->
+
+        <section class="cta">
+
+            <h2>
+                Ready to enjoy Iceland?
+            </h2>
+
+            <p>
+                Send me your trip details and I'll help you arrange your ride.
+            </p>
+
+
+            <div class="cta-buttons">
+
+                <a
+                    class="cta-button whatsapp"
+                    href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride%20in%20Iceland."
+                    target="_blank">
+                    💬 Book on WhatsApp
+                </a>
+
+
+                <a
+                    class="cta-button call"
+                    href="tel:+31687344108">
+                    📞 Call Adam
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <strong>ADAM RIDE</strong>
+
+        <br>
+
+        Private transportation in Iceland
+
+        <div class="footer-slogan">
+            Ride easy, travel happy!
         </div>
 
-        <div>
-
-            <span class="service-title">
-                Private Rides
-            </span>
-
-            <span class="service-description">
-                Comfortable and discreet transportation around Reykjavík and beyond.
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="service">
-
-        <div class="service-number">
-            03
-        </div>
-
-        <div>
-
-            <span class="service-title">
-                Iceland Experiences
-            </span>
-
-            <span class="service-description">
-                Golden Circle and selected Iceland destinations with a private driver.
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="service">
-
-        <div class="service-number">
-            04
-        </div>
-
-        <div>
-
-            <span class="service-title">
-                Blue Lagoon · Sky Lagoon
-            </span>
-
-            <span class="service-description">
-                Private transfers arranged around your schedule.
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =================================================
-     TRUST
-===================================================== -->
-
-<section class="trust">
-
-    <div class="trust-item">
-
-        <strong>
-            PRIVATE
-        </strong>
-
-        <span>
-            Personal service
-        </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-        <strong>
-            COMFORT
-        </strong>
-
-        <span>
-            Relaxed journey
-        </span>
-
-    </div>
-
-
-    <div class="trust-item">
-
-        <strong>
-            RELIABLE
-        </strong>
-
-        <span>
-            On time
-        </span>
-
-    </div>
-
-</section>
-
-
-<!-- =================================================
-     BOOKING
-===================================================== -->
-
-<section class="booking">
-
-    <div class="booking-label">
-        Your journey starts here
-    </div>
-
-
-    <h2>
-        Book your ride.
-    </h2>
-
-
-    <p>
-        Send your pickup location, destination,
-        date and preferred time on WhatsApp.
-    </p>
-
-
-    <a
-        class="booking-button"
-        href="https://wa.me/31687344108"
-        target="_blank"
-    >
-        MESSAGE ADAM ON WHATSAPP
-    </a>
-
-</section>
-
-
-<!-- =================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-    <div class="footer-logo">
-        ADAM RIDE
-    </div>
-
-    Professional · Comfortable · Reliable<br>
-
-    Reykjavík, Iceland
-
-</footer>
-
+    </footer>
 
 </div>
 
