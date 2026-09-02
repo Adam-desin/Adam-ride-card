@@ -1,1401 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ADAM RIDE | Private Driver Iceland</title>
-
-<style>
-
-/* =========================================================
-   ADAM RIDE — PREMIUM ICELAND WEBSITE
-========================================================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    background:#eef2ef;
-    color:#18221f;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.page{
-    width:100%;
-    max-width:1100px;
-    margin:auto;
-    background:#fff;
-    min-height:100vh;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-    position:relative;
-    min-height:720px;
-    overflow:hidden;
-
-    background-image:
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.05) 0%,
-            rgba(0,0,0,.02) 35%,
-            rgba(0,0,0,.72) 100%
-        ),
-        url("https://adam-desin.github.io/Adam-ride-card/hero.jpg");
-
-    background-position:center;
-    background-size:cover;
-}
-
-
-.nav{
-    position:relative;
-    z-index:10;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:28px 42px;
-
-    color:white;
-}
-
-
-.logo{
-    font-size:30px;
-    font-weight:900;
-    letter-spacing:3px;
-}
-
-.logo span{
-    color:#e5393d;
-}
-
-.logo-sub{
-    margin-top:4px;
-    font-size:9px;
-    letter-spacing:2px;
-    opacity:.9;
-}
-
-
-.nav-links{
-    display:flex;
-    gap:28px;
-    align-items:center;
-
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:.7px;
-}
-
-.nav-links a{
-    transition:.2s;
-}
-
-.nav-links a:hover{
-    color:#ff565a;
-}
-
-
-.nav-book{
-    padding:11px 18px;
-
-    border:1px solid rgba(255,255,255,.85);
-    border-radius:30px;
-
-    font-size:10px;
-    font-weight:900;
-
-    backdrop-filter:blur(7px);
-}
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
-.hero-content{
-    position:absolute;
-    z-index:5;
-
-    left:60px;
-    bottom:60px;
-
-    max-width:660px;
-
-    color:white;
-}
-
-
-.hero-label{
-    display:inline-block;
-
-    padding:8px 14px;
-
-    border:1px solid rgba(255,255,255,.25);
-    border-radius:30px;
-
-    background:rgba(0,0,0,.18);
-
-    backdrop-filter:blur(8px);
-
-    font-size:10px;
-    font-weight:900;
-    letter-spacing:1.5px;
-
-    margin-bottom:18px;
-}
-
-
-.hero h1{
-    font-size:68px;
-    line-height:.94;
-
-    letter-spacing:-3px;
-
-    font-weight:900;
-
-    text-shadow:
-        0 5px 30px rgba(0,0,0,.35);
-}
-
-.hero h1 span{
-    color:#ed3a3e;
-}
-
-
-.hero-description{
-    max-width:570px;
-
-    margin-top:20px;
-
-    font-size:17px;
-    line-height:1.55;
-
-    color:rgba(255,255,255,.95);
-}
-
-
-.hero-slogan{
-    margin-top:14px;
-
-    font-size:14px;
-    font-weight:800;
-}
-
-
-.hero-button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    margin-top:24px;
-
-    padding:16px 26px;
-
-    background:#dc3035;
-    color:#fff;
-
-    border-radius:12px;
-
-    font-size:13px;
-    font-weight:900;
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.25);
-
-    transition:.25s;
-}
-
-.hero-button:hover{
-    transform:translateY(-3px);
-}
-
-
-/* =========================================================
-   WEEKLY OFFER
-========================================================= */
-
-.offer{
-    position:relative;
-    z-index:20;
-
-    margin:-38px 45px 0;
-
-    padding:25px 28px;
-
-    background:#fff;
-
-    border-radius:22px;
-
-    box-shadow:
-        0 20px 55px rgba(0,0,0,.15);
-
-    display:grid;
-
-    grid-template-columns:
-        1.6fr
-        .65fr
-        .75fr;
-
-    align-items:center;
-
-    gap:25px;
-}
-
-
-.offer-label{
-    display:inline-block;
-
-    padding:6px 11px;
-
-    border-radius:20px;
-
-    background:#dc3035;
-
-    color:white;
-
-    font-size:9px;
-    font-weight:900;
-
-    letter-spacing:1px;
-
-    margin-bottom:9px;
-}
-
-
-.offer h2{
-    font-size:24px;
-    line-height:1.2;
-}
-
-
-.offer-route{
-    margin-top:7px;
-
-    color:#747e79;
-
-    font-size:12px;
-    line-height:1.5;
-}
-
-
-.offer-price{
-    color:#d92f34;
-
-    font-size:42px;
-    font-weight:900;
-
-    white-space:nowrap;
-}
-
-.offer-price small{
-    color:#222;
-
-    font-size:14px;
-}
-
-
-.offer-button{
-    display:block;
-
-    padding:16px;
-
-    border-radius:12px;
-
-    background:#d92f34;
-
-    color:white;
-
-    text-align:center;
-
-    font-size:12px;
-    font-weight:900;
-
-    transition:.25s;
-}
-
-.offer-button:hover{
-    transform:translateY(-2px);
-}
-
-
-/* =========================================================
-   CONTENT
-========================================================= */
-
-.content{
-    padding:75px 45px 30px;
-}
-
-
-.section-label{
-    text-align:center;
-
-    color:#d62f34;
-
-    font-size:10px;
-    font-weight:900;
-
-    letter-spacing:2px;
-}
-
-
-.section-title{
-    margin-top:8px;
-    margin-bottom:35px;
-
-    text-align:center;
-
-    font-size:35px;
-    letter-spacing:-1px;
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.services{
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:17px;
-}
-
-
-.service{
-    overflow:hidden;
-
-    background:white;
-
-    border:
-        1px solid #e1e8e4;
-
-    border-radius:20px;
-
-    box-shadow:
-        0 8px 28px rgba(0,0,0,.055);
-
-    transition:.25s;
-}
-
-
-.service:hover{
-    transform:translateY(-6px);
-
-    box-shadow:
-        0 18px 40px rgba(0,0,0,.12);
-}
-
-
-/* =========================================================
-   PROFESSIONAL SERVICE IMAGES
-========================================================= */
-
-.service-image{
-    position:relative;
-
-    height:160px;
-
-    overflow:hidden;
-
-    background:#dfe7e3;
-}
-
-
-.service-image img{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:
-        transform .5s ease;
-}
-
-
-.service:hover .service-image img{
-    transform:scale(1.05);
-}
-
-
-.service-image::after{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 55%,
-            rgba(0,0,0,.30)
-        );
-}
-
-
-/* =========================================================
-   PRIVATE DRIVER CAR IMAGE
-========================================================= */
-
-.car-image{
-    object-position:center;
-}
-
-
-/* =========================================================
-   SERVICE CONTENT
-========================================================= */
-
-.service-content{
-    padding:18px;
-
-    text-align:center;
-}
-
-
-.service-content h3{
-    margin-bottom:7px;
-
-    font-size:16px;
-    font-weight:900;
-}
-
-
-.service-content p{
-    color:#78817d;
-
-    font-size:12px;
-
-    line-height:1.5;
-}
-
-
-/* =========================================================
-   WHY ADAM
-========================================================= */
-
-.why{
-    margin-top:52px;
-
-    padding:34px;
-
-    border-radius:23px;
-
-    background:
-        linear-gradient(
-            120deg,
-            #15221e,
-            #465a50
-        );
-
-    color:white;
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    text-align:center;
-}
-
-
-.why-item{
-    padding:10px;
-
-    border-right:
-        1px solid
-        rgba(255,255,255,.14);
-}
-
-
-.why-item:last-child{
-    border-right:0;
-}
-
-
-.why-number{
-    margin-bottom:10px;
-
-    font-size:23px;
-
-    font-weight:900;
-
-    color:#fff;
-}
-
-
-.why-item h3{
-    margin-bottom:7px;
-
-    font-size:11px;
-    font-weight:900;
-}
-
-
-.why-item p{
-    color:#ccd5d1;
-
-    font-size:11px;
-
-    line-height:1.5;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact{
-    margin-top:25px;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    background:#111;
-
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:space-between;
-
-    gap:20px;
-}
-
-
-.contact-title{
-    font-size:18px;
-
-    font-weight:900;
-
-    letter-spacing:.5px;
-}
-
-
-.contact-info{
-    margin-top:6px;
-
-    color:#aaa;
-
-    font-size:11px;
-
-    line-height:1.6;
-}
-
-
-.whatsapp{
-    display:inline-block;
-
-    padding:15px 22px;
-
-    border-radius:12px;
-
-    background:#25d366;
-
-    color:white;
-
-    font-size:13px;
-
-    font-weight:900;
-
-    white-space:nowrap;
-
-    transition:.25s;
-}
-
-
-.whatsapp:hover{
-    transform:translateY(-2px);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-    margin-top:45px;
-
-    padding:30px 20px;
-
-    border-top:
-        1px solid #e8ecea;
-
-    text-align:center;
-
-    color:#858d89;
-
-    font-size:10px;
-
-    line-height:1.8;
-}
-
-
-footer strong{
-    color:#202824;
-
-    letter-spacing:2px;
-}
-
-
-.footer-slogan{
-    color:#d72f34;
-
-    font-weight:900;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:850px){
-
-    .nav{
-        padding:22px 25px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        min-height:650px;
-    }
-
-    .hero-content{
-        left:28px;
-        right:28px;
-        bottom:45px;
-    }
-
-    .hero h1{
-        font-size:53px;
-    }
-
-    .offer{
-        margin:-30px 18px 0;
-
-        grid-template-columns:1fr;
-
-        gap:14px;
-    }
-
-    .offer-price{
-        font-size:38px;
-    }
-
-    .content{
-        padding:60px 20px 25px;
-    }
-
-    .services{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .why{
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:15px;
-    }
-
-    .why-item{
-        border-right:0;
-    }
-
-    .contact{
-        flex-direction:column;
-
-        text-align:center;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:480px){
-
-    body{
-        background:#fff;
-    }
-
-    .hero{
-        min-height:620px;
-    }
-
-    .nav{
-        padding:20px 18px;
-    }
-
-    .logo{
-        font-size:24px;
-    }
-
-    .logo-sub{
-        font-size:8px;
-    }
-
-    .nav-book{
-        padding:9px 12px;
-        font-size:9px;
-    }
-
-    .hero-content{
-        left:20px;
-        right:20px;
-        bottom:35px;
-    }
-
-    .hero-label{
-        font-size:8px;
-        letter-spacing:1px;
-    }
-
-    .hero h1{
-        font-size:44px;
-        letter-spacing:-2px;
-    }
-
-    .hero-description{
-        font-size:14px;
-    }
-
-    .hero-button{
-        width:100%;
-    }
-
-    .offer{
-        margin:-25px 13px 0;
-
-        padding:21px;
-
-        border-radius:19px;
-    }
-
-    .offer h2{
-        font-size:21px;
-    }
-
-    .offer-price{
-        font-size:36px;
-    }
-
-    .content{
-        padding:55px 15px 20px;
-    }
-
-    .section-title{
-        font-size:28px;
-    }
-
-    .services{
-        grid-template-columns:1fr;
-    }
-
-    .service-image{
-        height:190px;
-    }
-
-    .why{
-        padding:20px 10px;
-    }
-
-    .why-item{
-        padding:8px 5px;
-    }
-
-    .why-item h3{
-        font-size:10px;
-    }
-
-    .why-item p{
-        font-size:10px;
-    }
-
-    .contact{
-        padding:23px 15px;
-    }
-
-    .whatsapp{
-        width:100%;
-        text-align:center;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADAM RIDE - Private Driver & Iceland Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0a0f1d;
+            --bg-card: #141c2e;
+            --primary: #38bdf8;
+            --accent: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(56, 189, 248, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--primary);
+        }
+
+        .brand-name span {
+            color: var(--text-main);
+        }
+
+        .brand-sub {
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-book {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #0a0f1d;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn-book:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 8% 80px;
+            background: radial-gradient(circle at center, #1b263b 0%, var(--bg-deep) 70%);
+        }
+
+        .hero-badge {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 8px 16px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: clamp(15px, 2vw, 18px);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-note {
+            font-size: 14px;
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 35px;
+        }
+
+        /* Weekly Offer Section */
+        .offer-section {
+            padding: 80px 8%;
+            background: var(--bg-deep);
+        }
+
+        .offer-card {
+            background: linear-gradient(145deg, #162238, #10192b);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .offer-tag {
+            font-size: 11px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .offer-content h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .offer-content p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .offer-price {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            text-align: right;
+        }
+
+        .offer-price small {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 8%;
+            background: #0d1424;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+
+        .service-info {
+            padding: 25px;
+        }
+
+        .service-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .service-info p {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .feature-num {
+            font-size: 24px;
+            font-weight: 900;
+            color: rgba(56, 189, 248, 0.15);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .feature-box h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Contact Box / Banner */
+        .contact-banner {
+            padding: 60px 8%;
+            background: var(--bg-deep);
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 8%;
+            background: #070b14;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--text-main);
+            font-size: 15px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer span {
+            color: var(--primary);
+            display: block;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .offer-card, .contact-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .offer-price {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
 
-<div class="page">
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-
-    <nav class="nav">
-
-
-        <div>
-
-            <div class="logo">
-
-                ADAM <span>RIDE</span>
-
-            </div>
-
-
-            <div class="logo-sub">
-
-                PRIVATE DRIVER • ICELAND
-
-            </div>
-
+    <!-- Navbar -->
+    <nav>
+        <div class="logo-container">
+            <div class="brand-name">ADAM <span>RIDE</span></div>
+            <div class="brand-sub">PRIVATE DRIVER • ICELAND</div>
         </div>
-
-
         <div class="nav-links">
-
-            <a href="#services">
-                SERVICES
-            </a>
-
-            <a href="#offer">
-                WEEKLY OFFER
-            </a>
-
-            <a href="#contact">
-                CONTACT
-            </a>
-
+            <a href="#services">SERVICES</a>
+            <a href="#offer">WEEKLY OFFER</a>
+            <a href="#contact">CONTACT</a>
         </div>
-
-
-        <a
-            class="nav-book"
-            href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride."
-            target="_blank">
-
-            BOOK NOW
-
-        </a>
-
-
+        <a href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="btn-book">BOOK NOW</a>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">PRIVATE DRIVER • AIRPORT TRANSFERS • ICELAND</div>
+        <h1>RIDE EASY,<br><span>TRAVEL HAPPY.</span></h1>
+        <p>Sit back, relax and enjoy the incredible Icelandic landscape while Adam takes care of the road.</p>
+        <div class="hero-note">Your journey is part of the experience. 🇮🇸</div>
+        <a href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="btn-book" style="padding: 14px 32px; font-size: 15px;">BOOK YOUR RIDE</a>
+    </section>
 
-    <div class="hero-content">
+    <!-- Weekly Offer Section -->
+    <section class="offer-section" id="offer">
+        <div class="offer-card">
+            <div class="offer-content">
+                <span class="offer-tag">THIS WEEK ONLY</span>
+                <h2>Reykjavík → Keflavík Airport</h2>
+                <p>Private one-way airport transfer • Door-to-door service • Comfortable ride</p>
+            </div>
+            <div class="offer-price">
+                20.000 <small>ISK</small>
+            </div>
+            <a href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20want%20to%20book%20the%2020%2C000%20ISK%20weekly%20airport%20offer." target="_blank" class="btn-book">BOOK THIS OFFER</a>
+        </div>
+    </section>
 
-
-        <div class="hero-label">
-
-            PRIVATE DRIVER
-            •
-            AIRPORT TRANSFERS
-            •
-            ICELAND
-
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <div class="section-subtitle">MY SERVICES</div>
+            <h2>Travel Iceland Your Way</h2>
         </div>
 
-
-        <h1>
-
-            RIDE EASY,
-
-            <br>
-
-            <span>
-                TRAVEL HAPPY.
-            </span>
-
-        </h1>
-
-
-        <p class="hero-description">
-
-            Sit back, relax and enjoy the incredible
-            Icelandic landscape while Adam takes care
-            of the road.
-
-        </p>
-
-
-        <div class="hero-slogan">
-
-            Your journey is part of the experience. 🇮🇸
-
-        </div>
-
-
-        <a
-            class="hero-button"
-            href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride."
-            target="_blank">
-
-            BOOK YOUR RIDE
-
-        </a>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WEEKLY OFFER
-===================================================== -->
-
-<section
-    class="offer"
-    id="offer">
-
-
-    <div>
-
-
-        <div class="offer-label">
-
-            THIS WEEK ONLY
-
-        </div>
-
-
-        <h2>
-
-            Reykjavík → Keflavík Airport
-
-        </h2>
-
-
-        <p class="offer-route">
-
-            Private one-way airport transfer
-            • Door-to-door service
-            • Comfortable ride
-
-        </p>
-
-
-    </div>
-
-
-    <div class="offer-price">
-
-        20.000
-
-        <small>
-            ISK
-        </small>
-
-    </div>
-
-
-    <a
-        class="offer-button"
-        href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20want%20to%20book%20the%2020%2C000%20ISK%20weekly%20airport%20offer."
-        target="_blank">
-
-        BOOK THIS OFFER
-
-    </a>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     SERVICES
-===================================================== -->
-
-<section
-    class="content"
-    id="services">
-
-
-    <div class="section-label">
-
-        MY SERVICES
-
-    </div>
-
-
-    <h2 class="section-title">
-
-        Travel Iceland Your Way
-
-    </h2>
-
-
-    <div class="services">
-
-
-        <!-- =================================================
-             AIRPORT TRANSFER
-        ================================================== -->
-
-        <div class="service">
-
-
-            <div class="service-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1000&q=85"
-                    alt="Iceland landscape">
-
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1521292270410-a8c4d716d518?auto=format&fit=crop&w=1000&q=85" alt="Iceland landscape">
+                </div>
+                <div class="service-info">
+                    <h3>Airport Transfers</h3>
+                    <p>Reykjavík ↔ Keflavík International Airport</p>
+                </div>
             </div>
 
-
-            <div class="service-content">
-
-                <h3>
-
-                    Airport Transfers
-
-                </h3>
-
-
-                <p>
-
-                    Reykjavík ↔ Keflavík
-                    International Airport
-
-                </p>
-
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://adam-desin.github.io/Adam-ride-card/car.jpg" alt="Red Toyota Corolla Cross - ADAM RIDE">
+                </div>
+                <div class="service-info">
+                    <h3>Private Driver</h3>
+                    <p>Comfortable and reliable private transportation</p>
+                </div>
             </div>
 
-
-        </div>
-
-
-
-        <!-- =================================================
-             PRIVATE DRIVER — REAL TOYOTA COROLLA CROSS
-        ================================================== -->
-
-        <div class="service">
-
-
-            <div class="service-image">
-
-                <img
-                    class="car-image"
-                    src="https://adam-desin.github.io/Adam-ride-card/car.jpg"
-                    alt="Red Toyota Corolla Cross - ADAM RIDE">
-
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1000&q=85" alt="Iceland mountains and landscape">
+                </div>
+                <div class="service-info">
+                    <h3>Iceland Tours</h3>
+                    <p>Golden Circle and Iceland's beautiful places</p>
+                </div>
             </div>
 
-
-            <div class="service-content">
-
-                <h3>
-
-                    Private Driver
-
-                </h3>
-
-
-                <p>
-
-                    Comfortable and reliable
-                    private transportation
-
-                </p>
-
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85" alt="Blue Lagoon & Sky Lagoon">
+                </div>
+                <div class="service-info">
+                    <h3>Blue Lagoon & Sky Lagoon</h3>
+                    <p>Private transportation without the stress</p>
+                </div>
             </div>
-
-
         </div>
 
-
-
-        <!-- =================================================
-             ICELAND TOURS
-        ================================================== -->
-
-        <div class="service">
-
-
-            <div class="service-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=1000&q=85"
-                    alt="Iceland mountains and landscape">
-
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-num">01</div>
+                <h3>SAFE & RELIABLE</h3>
+                <p>Your safety and comfort come first.</p>
             </div>
-
-
-            <div class="service-content">
-
-                <h3>
-
-                    Iceland Tours
-
-                </h3>
-
-
-                <p>
-
-                    Golden Circle and
-                    Iceland's beautiful places
-
-                </p>
-
+            <div class="feature-box">
+                <div class="feature-num">02</div>
+                <h3>LOCAL EXPERIENCE</h3>
+                <p>Enjoy Iceland with a driver who knows the roads.</p>
             </div>
-
-
-        </div>
-
-
-
-        <!-- =================================================
-             LAGOONS
-        ================================================== -->
-
-        <div class="service">
-
-
-            <div class="service-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1000&q=85"
-                    alt="Iceland geothermal landscape">
-
+            <div class="feature-box">
+                <div class="feature-num">03</div>
+                <h3>COMFORTABLE</h3>
+                <p>Relax and enjoy the scenery during your ride.</p>
             </div>
-
-
-            <div class="service-content">
-
-                <h3>
-
-                    Blue Lagoon & Sky Lagoon
-
-                </h3>
-
-
-                <p>
-
-                    Private transportation
-                    without the stress
-
-                </p>
-
+            <div class="feature-box">
+                <div class="feature-num">04</div>
+                <h3>PERSONAL SERVICE</h3>
+                <p>A private experience made for you.</p>
             </div>
-
-
         </div>
+    </section>
 
-
-    </div>
-
-
-
-<!-- =====================================================
-     WHY ADAM
-===================================================== -->
-
-<div class="why">
-
-
-    <div class="why-item">
-
-        <div class="why-number">
-            01
+    <!-- Contact Banner -->
+    <section class="contact-banner" id="contact">
+        <div class="contact-card">
+            <div class="contact-info">
+                <h3>ADAM RIDE</h3>
+                <p>Private Driver & Airport Transfers<br>Reykjavík, Iceland<br>+31 6 87344108</p>
+            </div>
+            <a href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride." target="_blank" class="btn-book" style="padding: 14px 28px;">BOOK ON WHATSAPP</a>
         </div>
+    </section>
 
-        <h3>
-            SAFE & RELIABLE
-        </h3>
-
-        <p>
-            Your safety and comfort
-            come first.
-        </p>
-
-    </div>
-
-
-    <div class="why-item">
-
-        <div class="why-number">
-            02
-        </div>
-
-        <h3>
-            LOCAL EXPERIENCE
-        </h3>
-
-        <p>
-            Enjoy Iceland with a
-            driver who knows the roads.
-        </p>
-
-    </div>
-
-
-    <div class="why-item">
-
-        <div class="why-number">
-            03
-        </div>
-
-        <h3>
-            COMFORTABLE
-        </h3>
-
-        <p>
-            Relax and enjoy the
-            scenery during your ride.
-        </p>
-
-    </div>
-
-
-    <div class="why-item">
-
-        <div class="why-number">
-            04
-        </div>
-
-        <h3>
-            PERSONAL SERVICE
-        </h3>
-
-        <p>
-            A private experience
-            made for you.
-        </p>
-
-    </div>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<div
-    class="contact"
-    id="contact">
-
-
-    <div>
-
-
-        <div class="contact-title">
-
-            ADAM RIDE
-
-        </div>
-
-
-        <div class="contact-info">
-
-            Private Driver & Airport Transfers
-
-            <br>
-
-            Reykjavík, Iceland
-
-            <br>
-
-            +31 6 87344108
-
-        </div>
-
-
-    </div>
-
-
-    <a
-        class="whatsapp"
-        href="https://wa.me/31687344108?text=Hello%20Adam%2C%20I%20would%20like%20to%20book%20a%20ride."
-        target="_blank">
-
-        BOOK ON WHATSAPP
-
-    </a>
-
-
-</div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <strong>
-        ADAM RIDE
-    </strong>
-
-    <br>
-
-    Private transportation in Iceland
-
-    <br>
-
-    <span class="footer-slogan">
-        Ride easy, travel happy!
-    </span>
-
-</footer>
-
-
-</div>
+    <!-- Footer -->
+    <footer>
+        <strong>ADAM RIDE</strong>
+        Private transportation in Iceland
+        <span>Ride easy, travel happy!</span>
+    </footer>
 
 </body>
 </html>
